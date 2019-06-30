@@ -1,0 +1,15 @@
+{
+  "name": "tabs-tdd",
+  "version": "1.0.0",
+  "description": "## Intro Your client has requested a tab component for their site. The designer has created a design for large screens in Sketch however they haven't done anything for small screens. They have now gone on holiday with the work unfinished and you have the task to complete the work.",
+  "main": "tabs.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^24.8.0"
+  }
+}
