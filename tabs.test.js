@@ -73,3 +73,28 @@ test('when clicking a tab makes content display', () => {
     expect(document.querySelector('.content1').classList).not.toContain('tabs__content-active');
     expect(document.querySelector('.content2').classList).not.toContain('tabs__content-active');
 });
+
+test('should render correctly on all devices', () => {
+    const  myContent = 
+        `<ul class="tabs__menu">
+            <li class="tabs__item"><a class="tab1 tabs__anchor tabs__anchor-active" href="#">Terminal 1</a></li>
+            <li class="tabs__item"><a class="tab2 tabs__anchor" href="#">Terminal 2</a></li>
+            <li class="tabs__item"><a class="tab3 tabs__anchor" href="#">Terminal 3</a></li>
+        </ul>
+        <div class="container">
+            <div class="content1 tabs__content tabs__content-active">
+                <h1>content 1</h1>
+            </div>
+            <div class="content2 tabs__content">
+                <h1>content 2</h1>
+            </div>
+            <div class="content3 tabs__content">
+                <h1>content 3</h1>
+            </div>
+        </div>`;
+
+        // const renderer = require('react-test-renderer'); missing react?!?!?
+
+        const tree = renderer.create(myContent).toJSON();
+        expect(tree).toMatchSnapshot();
+});
